@@ -10,11 +10,9 @@ This is a **fork** of the [Transparent Blue](https://github.com/JOHLC/transparen
 
 This project replaces the original blue color palette with phosphor-green (`#14F514`) and radioactive dark backgrounds (`rgba(0, 40, 0, ...)`). It also includes a toolchain (Python) to generate consistent AI artwork for dashboards.
 
-![Transparent Fallout Preview]()
-
 ## Preview
 
-<img src="https://raw.githubusercontent.com/jrx-code/hassio-transparent-fallout/1.0.7/ha-preview.png" alt="Preview" width="100%">
+<img src="https://raw.githubusercontent.com/jrx-code/hassio-transparent-fallout/1.0.8/ha-preview.png" alt="Preview" width="100%">
 
 
 ## 1. Theme Configuration
