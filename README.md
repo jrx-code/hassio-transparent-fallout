@@ -10,6 +10,8 @@ This is a **fork** of the [Transparent Blue](https://github.com/JOHLC/transparen
 
 This project replaces the original blue color palette with phosphor-green (`#14F514`) and radioactive dark backgrounds (`rgba(0, 40, 0, ...)`). It also includes a toolchain (Python) to generate consistent AI artwork for dashboards.
 
+![Transparent Fallout Preview](ha-preview.png)
+
 ## 1. Theme Configuration
 The core file is `transparent-fallout.yaml`.
 
