@@ -2,7 +2,7 @@
 
 #################################################################################
 
-# Transparent Fallout Amber theme
+# Transparent Fallout Blue Neon theme
 
 # Based on Transparent Blue by JOHLC
 
@@ -10,7 +10,7 @@
 
 #################################################################################
 
-transparent-fallout-amber:
+transparent-fallout-blue-neon:
 
 #################################################################################
 
@@ -20,35 +20,35 @@ transparent-fallout-amber:
 
 # Pip-Boy Colors
 
-# Phosphor Amber: #FFB642
+# Neon Blue: #08F7FE
 
 # Dark Backgrounds: Variations of RGB(0, 20, 0)
 
-main-color: 'rgba(45, 25, 0, 1)' # Main dark green
+main-color: 'rgba(0, 15, 45, 1)' # Main dark green
 
-main-color-tp: 'rgba(45, 25, 0, 0.4)' # Semi-transparent green
+main-color-tp: 'rgba(0, 15, 45, 0.4)' # Semi-transparent green
 
-main-color-tp-less: 'rgba(20, 10, 0, 0.6)' # Darker transparent
+main-color-tp-less: 'rgba(0, 5, 15, 0.6)' # Darker transparent
 
-main-color-very-tp: 'rgba(45, 25, 0, 0.1)' # Very transparent
+main-color-very-tp: 'rgba(0, 15, 45, 0.1)' # Very transparent
 
-main-color-less-tp: 'rgba(45, 25, 0, 0.85)' # Mostly opaque
+main-color-less-tp: 'rgba(0, 15, 45, 0.85)' # Mostly opaque
 
-main-color-2: 'rgba(30, 15, 0, 1)' # Almost black green
+main-color-2: 'rgba(0, 10, 25, 1)' # Almost black green
 
-main-color-2-tp: 'rgba(30, 15, 0, 0.75)'
+main-color-2-tp: 'rgba(0, 10, 25, 0.75)'
 
-main-color-3: 'rgba(20, 10, 0, 1)' # Deepest green/black
+main-color-3: 'rgba(0, 5, 15, 1)' # Deepest green/black
 
-main-color-3-tp: 'rgba(20, 10, 0, 0.4)'
+main-color-3-tp: 'rgba(0, 5, 15, 0.4)'
 
-main-color-4-less-tp: 'rgba(35, 20, 0, 0.95)'
+main-color-4-less-tp: 'rgba(0, 12, 35, 0.95)'
 
-active-color: '#FFB642' # The iconic bright green
+active-color: '#08F7FE' # The iconic bright green
 
-text-color: '#FFB642' # Main text color (Terminal Amber)
+text-color: '#08F7FE' # Main text color (Quantum Blue)
 
-text-dark-color: '#8B4500' # Darker green for disabled items
+text-dark-color: '#003366' # Darker green for disabled items
 
 #################################################################################
 
@@ -76,7 +76,7 @@ border-color: 'transparent'
 
 input-dropdown-icon-color: 'var(--active-color)'
 
-mdc-radio-unchecked-color: 'rgba(255, 182, 66, 0.4)'
+mdc-radio-unchecked-color: 'rgba(8, 247, 254, 0.4)'
 
 ha-color-fill-neutral-quiet-resting: 'var(--main-color)'
 
@@ -150,7 +150,7 @@ mdc-checkbox-unchecked-color: 'var(--text-dark-color)'
 
 # Header
 
-app-header-background-color: 'rgba(25, 12, 0, 0.9)'
+app-header-background-color: 'rgba(0, 8, 20, 0.9)'
 
 app-header-edit-background-color: 'var(--main-color-2)'
 
@@ -190,4 +190,102 @@ secondary-background-color: 'var(--main-color-3)'
 
 ha-card-border-radius: '2px' # Less rounded, more terminal-like
 
-ha-picture-card-backgro
+ha-picture-card-background-color: 'var(--main-color-tp)'
+
+# Developer tools
+
+code-editor-background-color: 'rgba(0, 5, 15, 1)'
+
+table-row-alternative-background-color: 'var(--main-color-3-tp)'
+
+table-row-background-color: 'rgba(0, 5, 15, 1)'
+
+# Sidebar
+
+sidebar-icon-color: 'var(--icon-color)'
+
+sidebar-selected-text-color: 'var(--active-color)'
+
+sidebar-background-color: 'rgba(0, 5, 15, 0.8)' # Slight tint
+
+sidebar-menu-button-background-color: 'transparent'
+
+app-drawer-scrim-background: 'rgba(0, 0, 0, .85)'
+
+# Switches
+
+switch-unchecked-button-color: 'var(--text-dark-color)'
+
+switch-unchecked-track-color: 'var(--main-color-tp)'
+
+switch-checked-button-color: 'var(--active-color)'
+
+switch-checked-track-color: 'var(--main-color-3)'
+
+# Sliders
+
+paper-slider-active-color: 'var(--active-color)'
+
+paper-slider-knob-color: 'var(--active-color)'
+
+paper-slider-container-color: 'var(--text-dark-color)'
+
+paper-slider-knob-start-color: 'var(--text-dark-color)'
+
+paper-slider-pin-color: 'var(--active-color)'
+
+paper-slider-pin-start-color: 'var(--main-color-2)'
+
+# Badges
+
+label-badge-text-color: 'black'
+
+label-badge-background-color: 'var(--active-color)'
+
+# Buttons
+
+mdc-button-outline-color: 'var(--active-color)'
+
+# Shadows (optional - maybe remove for flat terminal look?)
+
+ha-card-box-shadow: 'none' # Clean look
+
+# HACS
+
+hacs-badge-color: 'var(--active-color)'
+
+hacs-status-installed: 'var(--text-color)'
+
+hacs-status-pending-restart: 'var(--error-color)'
+
+hacs-status-pending-update: 'var(--active-color)'
+
+dialog-backdrop-filter: 'blur(2px) grayscale(100%)' # CRT effect feel
+
+# Others
+
+mdc-select-fill-color: 'var(--main-color-very-tp)'
+
+mdc-select-dropdown-icon-color: 'var(--active-color)'
+
+ha-bar-background-color: 'var(--main-color)'
+
+restriction-regular-lock-color: 'var(--error-color)'
+
+restriction-success-lock-color: 'var(--active-color)'
+
+mdc-text-field-fill-color: 'var(--main-color-tp)'
+
+input-fill-color: 'var(--main-color-less-tp)'
+
+mdc-text-field-disabled-fill-color: 'var(--main-color-tp)'
+
+mdc-select-disabled-fill-color: 'var(--main-color-tp)'
+
+# Background Image
+
+# Zmień URL na lokalny plik w /config/www/ (dostępny jako /local/...)
+
+# np. /local/fallout_pipboy.jpg
+
+lovelace-background: 'center / cover no-repeat fixed url("/local/fallout-blue-neon-bg.jpg")'

@@ -12,23 +12,27 @@ This project replaces the original blue color palette with phosphor-green (`#14F
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/jrx-code/hassio-transparent-fallout/1.0.8/ha-preview.png" alt="Preview" width="100%">
+## Preview
+
+<img src="https://raw.githubusercontent.com/jrx-code/hassio-transparent-fallout/main/previews/ha-preview.png" alt="Preview" width="100%">
 
 
 ## 1. Theme Configuration
-The core file is `transparent-fallout.yaml`.
 
-*   **Primary Color:** Phosphor Green (`#14F514`) - used for active states, text, and icons.
-*   **Backgrounds:** Semi-transparent dark green layers optimized for "monitor glow" effects.
+This theme comes in multiple color variants (YAML files) to match your preferred Pip-Boy HUD color.
+
+### Available Variants
+
+| Theme Name | Filename | Color Code | Description |
+| :--- | :--- | :--- | :--- |
+| **Transparent Fallout** | `transparent-fallout.yaml` | `#14F514` (Green) | Classic Pip-Boy 3000 aesthetic (Default). |
+| **Transparent Fallout Amber** | `transparent-fallout-amber.yaml` | `#FFB641` (Amber) | Fallout: New Vegas Mojave style. |
+| **Transparent Fallout Blue** | `transparent-fallout-blue-neon.yaml` | `#08F7FE` (Blue) | Nuka-Cola Quantum / Neon Sci-Fi look. |
+| **Transparent Fallout Light** | `transparent-fallout-light.yaml` | High Contrast | Day mode / Terminal printout style. |
+
+### Configuration Details
 *   **Fonts:** Configured to match terminal aesthetics (requires system font support or custom CSS injection).
-*   **Wallpaper:** Supports local background injection (default placeholder: `/local/fallout-bg.jpg`).
-
-### Variants Included
-This theme comes with color variants to match different Pip-Boy HUD settings:
-*   **Transparent Fallout (Default):** Classic Phosphor Green (`#14F514`).
-*   **Transparent Fallout Amber (New Vegas):** Mojave Amber (`#FFB641`) with Sepia-toned backgrounds.
-*   **Transparent Fallout Light:** (Coming Soon / Optional) High contrast light mode for better daylight visibility.
-
+*   **Wallpaper:** Each variant supports its own background image (e.g., `/local/fallout-bg.jpg`, `/local/fallout-blue-neon-bg.jpg`).
 
 ## 2. Automation Tools
 The repository includes scripts to automate the maintenance of dashboard assets.
@@ -86,9 +90,9 @@ For advanced users or contributors.
 4. Restart Home Assistant.
 
 ### Activation
-After installation (via HACS or Manual):
+After installation:
 1. Go to your **Profile** (click your user icon in the sidebar bottom left).
-2. Under **Theme**, select **Transparent Fallout**.
+2. Under **Theme**, choose your preferred flavor (e.g., **Transparent Fallout Blue Neon**).
 
 ## License
 MIT License (inherited from upstream).
