@@ -1,11 +1,14 @@
-## How to contribute to Transparent Blue
+## How to contribute to Transparent Fallout
 
 #### **Did you find a bug?**
-* Refer to our [security policy](https://github.com/JOHLC/transparentblue/blob/main/SECURITY.md).
-* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/JOHLC/transparentblue/issues).
+* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/jrx-code/hassio-transparent-fallout/issues).
+* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/jrx-code/hassio-transparent-fallout/issues/new).
+* Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or screenshot if applicable.
 
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/JOHLC/transparentblue/issues/new). 
-Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** / screenshot if possible
+#### **Did you create a new Fallout-themed asset?**
+* If you generated new room renders or icons matching the style, feel free to contribute them!
+* Place new assets in the `dist/assets` folder.
+* Ensure filenames follow the kebab-case convention (e.g., `nuclear-reactor.png`).
 
 #### **Did you write a patch that fixes a bug?**
 * Open a new GitHub pull request with the patch.
@@ -13,4 +16,5 @@ Be sure to include a **title and clear description**, as much relevant informati
 
 Thanks!
 
-Transparent Blue
+Transparent Fallout Team
+

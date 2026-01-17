@@ -1,6 +1,5 @@
 {
   "name": "Transparent Fallout",
   "render_readme": true,
-  "filename": "transparent-fallout.yaml"
+  "content_in_root": false
 }
-
