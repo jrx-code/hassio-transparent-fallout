@@ -23,6 +23,13 @@ The core file is `transparent-fallout.yaml`.
 *   **Fonts:** Configured to match terminal aesthetics (requires system font support or custom CSS injection).
 *   **Wallpaper:** Supports local background injection (default placeholder: `/local/fallout-bg.jpg`).
 
+### Variants Included
+This theme comes with color variants to match different Pip-Boy HUD settings:
+*   **Transparent Fallout (Default):** Classic Phosphor Green (`#14F514`).
+*   **Transparent Fallout Amber (New Vegas):** Mojave Amber (`#FFB641`) with Sepia-toned backgrounds.
+*   **Transparent Fallout Light:** (Coming Soon / Optional) High contrast light mode for better daylight visibility.
+
+
 ## 2. Automation Tools
 The repository includes scripts to automate the maintenance of dashboard assets.
 
