@@ -8,7 +8,7 @@ This is a **fork** of the [Transparent Blue](https://github.com/JOHLC/transparen
 
 ## Overview
 
-This project replaces the original blue color palette with phosphor-green (`#14F514`) and radioactive dark backgrounds (`rgba(0, 40, 0, ...)`). It also includes a toolchain (Python/Bash) to standardize asset management and generate consistent AI artwork for dashboards.
+This project replaces the original blue color palette with phosphor-green (`#14F514`) and radioactive dark backgrounds (`rgba(0, 40, 0, ...)`). It also includes a toolchain (Python) to generate consistent AI artwork for dashboards.
 
 ## 1. Theme Configuration
 The core file is `transparent-fallout.yaml`.
@@ -20,11 +20,6 @@ The core file is `transparent-fallout.yaml`.
 
 ## 2. Automation Tools
 The repository includes scripts to automate the maintenance of dashboard assets.
-
-### Asset Renaming (`rename.sh`)
-A Bash script that standardizes Polish filenames to English IDs to ensure consistency across the configuration.
-*   **Function:** Maps legacy names (e.g., `kotlownia.png`) to standard IDs (e.g., `boiler-room.png`).
-*   **Usage:** `chmod +x rename.sh && ./rename.sh`
 
 ### AI Art Prompt Generator (`generate_prompts.py`)
 A Python utility for generating Midjourney/DALL-E prompts for new rooms.
@@ -58,7 +53,6 @@ The `assets/` directory (structure flattened in root for this repo) contains ren
       themes: !include_dir_merge_named themes
     ```
 4.  Restart Home Assistant and select **Transparent Fallout** in your profile settings.
-5.  (Optional) Run `./rename.sh` if you are migrating graphic assets from a legacy installation.
 
 ## License
 MIT License (inherited from upstream).
