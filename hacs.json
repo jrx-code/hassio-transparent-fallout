@@ -1,4 +1,6 @@
 {
-  "name": "Transparent Blue",
-  "render_readme": "true"
+  "name": "Transparent Fallout",
+  "render_readme": true,
+  "filename": "transparent-fallout.yaml"
 }
+
