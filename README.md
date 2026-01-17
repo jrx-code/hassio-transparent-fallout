@@ -42,17 +42,41 @@ The `assets/` directory (structure flattened in root for this repo) contains ren
 
 ## Installation
 
-1.  Clone the repository:
+### Option 1: HACS (Recommended)
+This is a custom repository, so you need to add it manually to HACS.
+
+1. Open **HACS** in Home Assistant.
+2. Go to **Frontend**.
+3. Click the **3 dots** in the top right corner and select **Custom repositories**.
+4. Paste the repository URL:  
+   `https://github.com/jrx-code/hassio-transparent-fallout`
+5. Select category: **Theme**.
+6. Click **Add**.
+7. Now search for **Transparent Fallout** in the HACS Frontend tab and install it.
+8. Restart Home Assistant.
+
+### Option 2: Manual (Git Clone)
+For advanced users or contributors.
+
+1. Go to your Home Assistant `themes` directory:
     ```bash
-    git clone https://github.com/jrx-code/hassio-transparent-fallout.git
+    cd /config/themes/
     ```
-2.  Copy `transparent-fallout.yaml` to your Home Assistant `themes/` directory.
-3.  Add the following to your `configuration.yaml` (if not already present):
+2. Clone the repository:
+    ```bash
+    git clone https://github.com/jrx-code/hassio-transparent-fallout.git transparent-fallout
+    ```
+3. Add the following to your `configuration.yaml` (if not already present):
     ```yaml
     frontend:
       themes: !include_dir_merge_named themes
     ```
-4.  Restart Home Assistant and select **Transparent Fallout** in your profile settings.
+4. Restart Home Assistant.
+
+### Activation
+After installation (via HACS or Manual):
+1. Go to your **Profile** (click your user icon in the sidebar bottom left).
+2. Under **Theme**, select **Transparent Fallout**.
 
 ## License
 MIT License (inherited from upstream).
