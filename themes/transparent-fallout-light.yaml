@@ -58,7 +58,7 @@ transparent-fallout-light:
   mdc-select-label-ink-color: 'var(--text-color)'                              #Used for text in select boxes? 
   mdc-select-ink-color: 'var(--text-color)'    
   #Icons
-  icon-color: 'var(--text-color)'
+  icon-color: '#bdddcb'
   state-icon-color: 'var(--icon-color)'                            #Icon color at least on Entity (not entities) cards 
   paper-item-icon-color: 'var(--icon-color)'                       #Icon color defined above
   #paper-item-icon-active-color: 'rgb(128,247,112)'                #Active icon color - not used right now
@@ -170,4 +170,3 @@ transparent-fallout-light:
   mdc-select-disabled-fill-color: 'var(--main-color-tp)'
   paper-slider-height: '5px'
   input-disabled-ink-color: 'rgb(255 255 255 / 37%)'
-  
