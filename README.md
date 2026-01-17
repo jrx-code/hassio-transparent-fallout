@@ -14,7 +14,7 @@ This project replaces the original blue color palette with phosphor-green (`#14F
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/jrx-code/hassio-transparent-fallout/1.0.7/preview.png" alt="Preview" width="100%">
+<img src="https://raw.githubusercontent.com/jrx-code/hassio-transparent-fallout/1.0.7/ha-preview.png" alt="Preview" width="100%">
 
 
 ## 1. Theme Configuration
