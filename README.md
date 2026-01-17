@@ -1,73 +1,65 @@
-# Transparent Blue Theme for Home Assistant
-[![HACS Default](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)![GitHub Release Date](https://img.shields.io/github/release-date/johlc/transparentblue)![GitHub release (latest by date)](https://img.shields.io/github/v/release/johlc/transparentblue?label=Version&style=flat-square&labelColor=2ea9f4&color=1473ae)
+# Home Assistant Transparent Fallout Theme
+
+A complete visual overhaul for Home Assistant inspired by the **Fallout** universe (Pip-Boy aesthetic).
+
+This is a **fork** of the [Transparent Blue](https://github.com/JOHLC/transparentblue) theme by JOHLC.
+
+**Repository:** [https://github.com/jrx-code/hassio-transparent-fallout](https://github.com/jrx-code/hassio-transparent-fallout)
+
 ## Overview
-Transparent Blue is a theme designed for Home Assistant, offering a sleek and transparent blue aesthetic. It's my first custom theme for Home Assistant and my first ever GitHub/HACS repository.
 
-Please report any issues through the [issues section](https://github.com/JOHLC/transparentblue/issues) and provide feedback or ask questions on the [Home Assistant Community post](https://community.home-assistant.io/t/transparent-blue-custom-theme/).
+This project replaces the original blue color palette with phosphor-green (`#14F514`) and radioactive dark backgrounds (`rgba(0, 40, 0, ...)`). It also includes a toolchain (Python/Bash) to standardize asset management and generate consistent AI artwork for dashboards.
 
-## Screenshots
-**Main**<br />
-<img src="https://raw.githubusercontent.com/JOHLC/transparentblue/main/images/v2023.12.1-1.png" alt="Screenshot 1" width="1000">
+## 1. Theme Configuration
+The core file is `transparent-fallout.yaml`.
 
-**More info**<br />
-<img src="https://raw.githubusercontent.com/JOHLC/transparentblue/main/images/v2023.12.1-4.png" alt="Screenshot 1" width="750">
+*   **Primary Color:** Phosphor Green (`#14F514`) - used for active states, text, and icons.
+*   **Backgrounds:** Semi-transparent dark green layers optimized for "monitor glow" effects.
+*   **Fonts:** Configured to match terminal aesthetics (requires system font support or custom CSS injection).
+*   **Wallpaper:** Supports local background injection (default placeholder: `/local/fallout-bg.jpg`).
 
-**Sidebar**<br />
-<img src="https://raw.githubusercontent.com/JOHLC/transparentblue/main/images/v2023.12.1-2.png" alt="v2023.12.1-2.png" width="1000">
+## 2. Automation Tools
+The repository includes scripts to automate the maintenance of dashboard assets.
 
-**Menu**<br />
-<img src="https://raw.githubusercontent.com/JOHLC/transparentblue/main/images/v2023.12.1-3.png" alt="Screenshot 3" width="750">
+### Asset Renaming (`rename.sh`)
+A Bash script that standardizes Polish filenames to English IDs to ensure consistency across the configuration.
+*   **Function:** Maps legacy names (e.g., `kotlownia.png`) to standard IDs (e.g., `boiler-room.png`).
+*   **Usage:** `chmod +x rename.sh && ./rename.sh`
 
-<!-- replace screenshot --> 
+### AI Art Prompt Generator (`generate_prompts.py`)
+A Python utility for generating Midjourney/DALL-E prompts for new rooms.
+*   **Input:** `room-manifest.txt` (list of rooms).
+*   **Template:** `prompt.txt` (Fallout-style aesthetic definition).
+*   **Output:** `output_prompts.txt` (Ready-to-use prompts).
+*   **Usage:** `python3 generate_prompts.py`
 
-Here is the [Included background image](https://github.com/JOHLC/transparentblue/blob/main/images/background.jpg)<br />
+## 3. Asset Library
+The `assets/` directory (structure flattened in root for this repo) contains rendered graphics for floorplans and rooms.
 
+**Naming Convention:** Kebab-case English (e.g., `server-cabinet.png`, `garage-zs.png`).
 
-## HACS installation - recommended<br /> 
-Transparent Blue is now a default repo in HACS! 
-1. Open HACS
-2. Select "Frontend"
-3. Click add (+)
-4. Search for Transparent Blue and click it
-5. Click Download 
-You should now be able to select this theme in Home Assistant
+| Category | Examples |
+| :--- | :--- |
+| **Levels** | `level01.png`, `level02.png`, `townhouse.png` |
+| **Tech** | `servers.png`, `recuperator.png`, `pv.png` |
+| **Living** | `master-bedroom.png`, `kitchen-1.png` |
+| **Exterior** | `garage-zs.png`, `gate-01.png` |
 
-### Manual Installation - not recommended<br /> 
-1. Download the transparentblue.yaml file from the latest release
-2. Upload the downloaded file to your "themes" directory
-3. Add the resource reference to your lovelace config
+## Installation
 
-You should now be able to select this theme in Home Assistant
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/jrx-code/hassio-transparent-fallout.git
+    ```
+2.  Copy `transparent-fallout.yaml` to your Home Assistant `themes/` directory.
+3.  Add the following to your `configuration.yaml` (if not already present):
+    ```yaml
+    frontend:
+      themes: !include_dir_merge_named themes
+    ```
+4.  Restart Home Assistant and select **Transparent Fallout** in your profile settings.
+5.  (Optional) Run `./rename.sh` if you are migrating graphic assets from a legacy installation.
 
+## License
+MIT License (inherited from upstream).
 
-## Changing the background image<br />
-This theme uses a base64 encoded image. I use [this](https://www.base64-image.de/) website to encode my images. <br /> 
-To change the background of this theme, change the following in the .yaml file:
-
-````
-lovelace-background: 'center / cover no-repeat fixed url()'
-````
-
-In between the brackets, in the url() section, add your own base64 string:
-````
-# Example
-lovelace-background: 'center / cover no-repeat fixed url('data:image/png;base64,YOURLONGSTRING)'
-````
-Alternatively, you can use a local image stored in your config/www directory or a publicly accessible image url like so
-
-````
-lovelace-background: 'center / cover no-repeat fixed url("/local/background.png")' 
-# OR
-# lovelace-background: 'center / cover no-repeat fixed url("http://www.reportingday.com/wp-content/uploads/2018/06/Cat-Sleeping-Pics.jpg")' 
-````
-
-## Beta versions
-Beta versions may be released for personal testing. If you're using HACS, you can enable/disable beta versions by changing the "Show beta versions" setting.
-<br /> 
-<img src="https://github.com/JOHLC/transparentblue/blob/main/images/hacsbeta.png?raw=true" alt="hacs beta" >
-<br />
-
-## Other cool themes
-- https://github.com/3ative/3ative-blue-theme
-- https://github.com/naofireblade/clear-theme-dark
-<br />

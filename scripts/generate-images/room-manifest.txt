@@ -1,0 +1,6 @@
+# List of rooms, file extension is not necessary
+garage-zs.png
+master-bedroom.png
+server-room
+boiler-room.png
+
