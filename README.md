@@ -1,4 +1,4 @@
-# Home Assistant Transparent Fallout Theme
+# Home Assistant Transparent Fallout Theme v 1.07
 
 A complete visual overhaul for Home Assistant inspired by the **Fallout** universe (Pip-Boy aesthetic).
 
