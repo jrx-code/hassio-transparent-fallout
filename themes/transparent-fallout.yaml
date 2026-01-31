@@ -1,198 +1,153 @@
----
 #################################################################################
-# Transparent Fallout theme
-# Based on Transparent Blue by JOHLC
-# Modded for Fallout/Pip-Boy aesthetic
+# FALLOUT PIP-BOY TERMINAL - COMPLETE GLOBAL THEME (v2.7)
+# Optimized: Green Icons, Ultra-tight Gaps & Panel View Fix
+# Author: Home Assistant Architect @ JrX-Code
 #################################################################################
 
 transparent-fallout:
+  #################################################################################
+  # 1. COLOR VARIABLES
+  #################################################################################
+  active-color: '#14F514'
+  text-color: '#14F514'
+  text-dark-color: '#006400'
+  
+  # --- Ikony (Globalny Phosphor Green) ---
+  state-icon-color: 'var(--active-color)'
+  state-icon-active-color: 'var(--active-color)'
+  paper-item-icon-color: 'var(--active-color)'
+  paper-item-icon-active-color: 'var(--active-color)'
+  sidebar-icon-color: 'var(--active-color)'
+  sidebar-selected-icon-color: 'var(--active-color)'
 
-  #################################################################################
-  # Color variables
-  #################################################################################
+  # --- Odstępy (Ultra-ciaśniejszy układ dla widoku Panel) ---
+  grid-card-gap: "2px"
+  stack-card-margin: "1px"
+  masonry-view-card-margin: "2px"
 
-  # Pip-Boy Colors
-  # Phosphor Green: #14F514
-  # Dark Backgrounds: Variations of RGB(0, 20, 0)
+  # --- Tło i Główne Kolory ---
+  main-color-tp: 'rgba(0, 40, 0, 0.4)'
+  main-color-2: 'rgba(0, 20, 0, 1)'
+  main-color-3: 'rgba(0, 10, 0, 1)'
   
-  main-color: 'rgba(0, 40, 0, 1)' # Main dark green
-  main-color-tp: 'rgba(0, 40, 0, 0.4)' # Semi-transparent green
-  main-color-tp-less: 'rgba(0, 10, 0, 0.6)' # Darker transparent
-  main-color-very-tp: 'rgba(0, 40, 0, 0.1)' # Very transparent
-  main-color-less-tp: 'rgba(0, 40, 0, 0.85)' # Mostly opaque
-  
-  main-color-2: 'rgba(0, 20, 0, 1)' # Almost black green
-  main-color-2-tp: 'rgba(0, 20, 0, 0.75)'
-  
-  main-color-3: 'rgba(0, 10, 0, 1)' # Deepest green/black
-  main-color-3-tp: 'rgba(0, 10, 0, 0.4)'
-  
-  main-color-4-less-tp: 'rgba(0, 30, 0, 0.95)'
-  
-  active-color: '#14F514' # The iconic bright green
-  
-  text-color: '#14F514' # Main text color (Terminal Green)
-  text-dark-color: '#006400' # Darker green for disabled items
-  
-  #################################################################################
-  # Coloring
-  #################################################################################
-  
-  # UI / globals
-  primary-background-color: 'var(--main-color-2)'
-  mdc-dialog-scrim-color: 'rgba(0,0,0,.85)'
-  
-  mdc-theme-on-primary: 'var(--main-color-3)'
-  markdown-code-background-color: 'var(--main-color-2)'
-  material-background-color: 'var(--main-color-2-tp)'
-  material-primary-color: 'var(--active-color)'
-  
-  accent-color: 'var(--active-color)'
-  border-color: 'transparent'
-  
-  input-dropdown-icon-color: 'var(--active-color)'
-  mdc-radio-unchecked-color: 'rgba(20, 245, 20, 0.4)'
-  
-  ha-color-fill-neutral-quiet-resting: 'var(--main-color)'
-  ha-color-fill-primary-normal-resting: 'var(--main-color)'
-  ha-color-fill-primary-quiet-resting: 'var(--main-color-2)'
-  
-  ha-color-on-neutral-quiet: 'var(--text-color)'
-  ha-color-text-secondary: 'var(--text-color)'
-  
-  # Error color - usually red, but maybe amber/orange for fallout warning?
-  # Keeping red for critical errors, or switch to #FFB642 (Amber) if you prefer.
-  error-color: "#FF0000" 
-  
-  clear-background-color: "var(--accent-color)"
-  
-  # Text
-  primary-color: 'var(--active-color)' # Replaces the signature HA blue with Green
-  text-primary-color: 'var(--text-color)'
-  text-accent-color: 'var(--text-color)'
-  primary-text-color: 'var(--text-color)'
-  
-  ha-card-header-font-size: '18px' # Slightly larger for terminal feel
-  ha-card-header-color: 'var(--active-color)'
-  
-  app-header-text-color: 'var(--active-color)'
-  
-  mdc-theme-on-secondary: 'black'
-  disabled-text-color: 'var(--text-dark-color)'
-  
-  mdc-theme-primary: 'var(--text-color)'
-  ha-label-badge-label-color: 'black'
-  
-  dark-primary-opacity: '1'
-  
-  mdc-select-label-ink-color: 'var(--text-color)'
-  mdc-select-ink-color: 'var(--text-color)'
-  
-  wa-color-text-normal: 'var(--text-color)'
-  ha-color-on-neutral-normal: 'var(--text-color)'
-  wa-color-neutral-fill-normal: 'var(--accent-color)'
-  
-  # Icons
-  icon-color: 'var(--text-color)'
-  state-icon-color: 'var(--icon-color)'
-  paper-item-icon-color: 'var(--icon-color)'
-  
-  mdc-text-field-ink-color: 'var(--text-color)'
-  mdc-text-field-label-ink-color: "var(--text-color)"
-  
-  # Checkboxes
-  mdc-checkbox-unchecked-color: 'var(--text-dark-color)'
-  
-  # Header
-  app-header-background-color: 'rgba(0, 15, 0, 0.9)'
-  app-header-edit-background-color: 'var(--main-color-2)'
-  app-header-edit-text-color: 'var(--text-color)'
-  app-header-selection-bar-color: 'var(--active-color)'
-  
-  # Cards
-  ha-card-background: 'var(--main-color-tp)'
-  background-card-color: 'var(--main-color-2)'
-  card-background-color: 'var(--main-color-4-less-tp)'
-  paper-listbox-background-color: 'var(--main-color-2)'
-  
-  mdc-theme-surface: 'var(--main-color-less-tp)'
-  
-  round-slider-path-color: 'var(--main-color-less-tp)'
-  
-  mini-media-player-button-color: 'var(--main-color-tp)'
-  mini-media-player-overlay-color: 'var(--main-color-tp)'
-  
-  entities-divider-color: 'var(--text-dark-color)'
-  ha-card-border-color: 'transparent'
-  
-  # Datatable
-  data-table-background-color: 'var(--main-color-tp)'
-  
-  secondary-text-color: 'var(--text-color)'
+  primary-background-color: 'var(--main-color-3)'
   secondary-background-color: 'var(--main-color-3)'
+  accent-color: 'var(--active-color)'
+  primary-text-color: 'var(--text-color)'
+  secondary-text-color: 'var(--text-color)'
   
-  ha-card-border-radius: '2px' # Less rounded, more terminal-like
+  ha-card-background: 'transparent'
+  ha-card-border-radius: '15px'
+  ha-card-box-shadow: 'none'
   
-  ha-picture-card-background-color: 'var(--main-color-tp)'
+  # Kolory podstawowe (używane w obliczeniach Mushroom)
+  mush-rgb-active-color: 20, 245, 20    # Twoja zieleń #14F514 w formacie RGB
+  mush-rgb-disabled-color: 0, 68, 0    # Ciemna zieleń dla stanów OFF
+
+  # Nadpisanie kolorów ikon Mushroom
+  mush-icon-symbol-fcolor: var(--active-color)
+  mush-icon-fcolor: var(--active-color)
+  mush-icon-fixed-color: var(--active-color)
   
-  # Developer tools
-  code-editor-background-color: 'rgba(0, 10, 0, 1)'
-  table-row-alternative-background-color: 'var(--main-color-3-tp)'
-  table-row-background-color: 'rgba(0, 10, 0, 1)'
+  # Stany (On/Off)
+  mush-rgb-state-entity: var(--mush-rgb-active-color)
+  mush-rgb-state-light: var(--mush-rgb-active-color)
+  mush-rgb-state-fan: var(--mush-rgb-active-color)
+  mush-rgb-state-switch: var(--mush-rgb-active-color)
   
-  # Sidebar
-  sidebar-icon-color: 'var(--icon-color)'
-  sidebar-selected-text-color: 'var(--active-color)'
-  sidebar-background-color: 'rgba(0, 10, 0, 0.8)' # Slight tint
-  sidebar-menu-button-background-color: 'transparent'
-  app-drawer-scrim-background: 'rgba(0, 0, 0, .85)'
+  # Jeśli ikony mają być zawsze zielone, niezależnie od stanu:
+  mush-icon-color: var(--active-color)
   
-  # Switches
-  switch-unchecked-button-color: 'var(--text-dark-color)'
-  switch-unchecked-track-color: 'var(--main-color-tp)'
-  switch-checked-button-color: 'var(--active-color)'
-  switch-checked-track-color: 'var(--main-color-3)'
+  # Opcjonalnie: czcionka dla Mushroom
+  mush-card-primary-font-family: 'Courier New'
+  mush-card-secondary-font-family: 'Courier New'
   
-  # Sliders
-  paper-slider-active-color: 'var(--active-color)'
-  paper-slider-knob-color: 'var(--active-color)'
-  paper-slider-container-color: 'var(--text-dark-color)'
-  paper-slider-knob-start-color: 'var(--text-dark-color)'
-  paper-slider-pin-color: 'var(--active-color)'
-  paper-slider-pin-start-color: 'var(--main-color-2)'
-  
-  # Badges
-  label-badge-text-color: 'black'
-  label-badge-background-color: 'var(--active-color)'
-  
-  # Buttons
-  mdc-button-outline-color: 'var(--active-color)'
-  
-  # Shadows (optional - maybe remove for flat terminal look?)
-  ha-card-box-shadow: 'none' # Clean look
-  
-  # HACS
-  hacs-badge-color: 'var(--active-color)'
-  hacs-status-installed: 'var(--text-color)'
-  hacs-status-pending-restart: 'var(--error-color)'
-  hacs-status-pending-update: 'var(--active-color)'
-  
-  dialog-backdrop-filter: 'blur(2px) grayscale(100%)' # CRT effect feel
-  
-  # Others
-  mdc-select-fill-color: 'var(--main-color-very-tp)'
-  mdc-select-dropdown-icon-color: 'var(--active-color)'
-  ha-bar-background-color: 'var(--main-color)'
-  restriction-regular-lock-color: 'var(--error-color)'
-  restriction-success-lock-color: 'var(--active-color)'
-  
-  mdc-text-field-fill-color: 'var(--main-color-tp)'
-  input-fill-color: 'var(--main-color-less-tp)'
-  mdc-text-field-disabled-fill-color: 'var(--main-color-tp)'
-  mdc-select-disabled-fill-color: 'var(--main-color-tp)'
-  
-  # Background Image
-  # Zmień URL na lokalny plik w /config/www/ (dostępny jako /local/...)
-  # np. /local/fallout_pipboy.jpg
   lovelace-background: 'center / cover no-repeat fixed url("/local/fallout-bg.jpg")'
 
+  #################################################################################
+  # 2. CARD-MOD GLOBAL INJECTION
+  #################################################################################
+  card-mod-theme: transparent-fallout
+
+  # A. STYLIZACJA KART & MUSHROOM OVERRIDES
+  card-mod-card-yaml: |
+    .: |
+      ha-card {
+        background-color: transparent !important;
+        background-image: 
+          radial-gradient(circle at center, rgba(0,50,0,0.1) 0%, rgba(0,0,0,0.8) 100%), 
+          repeating-linear-gradient(transparent 0px, transparent 2px, rgba(0, 255, 0, 0.25) 3px, rgba(0, 255, 0, 0.25) 4px) !important;
+        background-size: 100% 100% !important;
+        border: 4px solid #2a2a2a !important;
+        box-shadow: inset 0 0 30px rgba(0,255,0,0.15), 0 0 20px rgba(0,0,0,0.8) !important;
+        color: var(--active-color) !important;
+        font-family: 'Courier New', monospace !important;
+        text-shadow: 0 0 4px var(--active-color), 0 0 8px rgba(0,200,0,0.6) !important;
+        animation: crt-flicker 0.15s infinite !important;
+        overflow: hidden !important;
+      }
+      @keyframes crt-flicker {
+        0% { opacity: 0.98; }
+        50% { opacity: 1; }
+        100% { opacity: 0.99; }
+      }
+
+    mushroom-cover-position-control$: |
+      mushroom-slider {
+        --main-color: #14F514 !important;
+        --bg-color: rgba(0, 30, 0, 0.9) !important;
+      }
+      
+    mushroom-shape-icon$: |
+      .shape { border: 2.5px outset #14F514 !important; }
+
+  # B. GLOBALNY EFEKT WIDOKU (Overlays & Padding)
+  card-mod-view-yaml: |
+    .: |
+      #view {
+        padding: 4px 0px 0px 0px !important;
+      }
+      ha-app-layout::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%),
+                    linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+        background-size: 100% 3px, 2px 100%;
+        z-index: 10;
+        pointer-events: none;
+      }
+      ha-app-layout::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(18, 16, 16, 0.05);
+        z-index: 11;
+        pointer-events: none;
+        animation: global-flicker 0.12s infinite, global-scanline 8s linear infinite;
+      }
+      @keyframes global-flicker {
+        0% { opacity: 0.1; }
+        50% { opacity: 0.13; }
+        100% { opacity: 0.1; }
+      }
+      @keyframes global-scanline {
+        0% {
+          background: linear-gradient(to bottom, transparent 0%, rgba(20, 245, 20, 0.1) 50%, transparent 100%);
+          background-size: 100% 30px;
+          background-repeat: no-repeat;
+          background-position: 0 -30px;
+        }
+        100% {
+          background: linear-gradient(to bottom, transparent 0%, rgba(20, 245, 20, 0.1) 50%, transparent 100%);
+          background-size: 100% 30px;
+          background-repeat: no-repeat;
+          background-position: 0 100vh;
+        }
+      }
+
+  # C. FIX DLA PANELU BOCZNEGO I ELEMENTÓW ROOT
+  card-mod-root-yaml: |
+    ha-app-layout {
+      --active-color: #14F514;
+    }
